@@ -1,0 +1,53 @@
+<link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
+<script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+
+
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            <ion-icon name="cart-outline"></ion-icon>
+            Carrito de compras
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-grid class="ion-margin">
+        <ion-row>
+            <ion-col>Nombre</ion-col>
+            <ion-col>Precio</ion-col>
+            <ion-col>Unidades</ion-col>
+            <ion-col>Precio Total</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let data of carrito; index as i">
+            <ion-col>{{data.nombre}}</ion-col>
+            <ion-col>{{data.precio}}</ion-col>
+            <ion-col>{{data.unidades}}</ion-col>
+            <ion-col>{{data.preciototal}}</ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <br>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>Datos de Compra</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="8">
+                        <p style="color: black;">Subtotal: </p>
+                        <p style="color: black;">Iva: </p>
+                        <p style="color: black;">Total a Pagar: </p>
+                    </ion-col>
+                    <ion-col size="4">
+                        <p style="color: black;">$ {{subtotal}}</p>
+                        <p style="color: black;">$ {{iva}}</p>
+                        <p style="color: black;">$ {{totalaPagar}}</p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+        </ion-card-content>
+    </ion-card>
+</ion-content>

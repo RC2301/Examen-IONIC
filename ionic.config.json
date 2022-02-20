@@ -1,0 +1,7 @@
+{
+  "name": "remedial",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
